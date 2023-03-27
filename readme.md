@@ -51,31 +51,31 @@ After you have this project in your machine.
 
 `Google Account`
 
-    1. Create credentials for authentication
+1. Create credentials for authentication
 
-        Go to [Google Developer Console](https://console.cloud.google.com/apis/dashboard).
+    Go to [Google Developer Console](https://console.cloud.google.com/apis/dashboard).
 
-        Create OAuth credentials. Follow the steps suggested by Google.
+    Create OAuth credentials. Follow the steps suggested by Google.
 
-        > Use same redirect URL as given in app. You can define your own but remember to change it here in app also.
+    > Use same redirect URL as given in app. You can define your own but remember to change it here in app also.
 
-        > Use Javascript origin as your host. In my case it is http://localhost:8000
+    > Use Javascript origin as your host. In my case it is http://localhost:8000
 
-    2. Create key for Google reCaptcha
+2. Create key for Google reCaptcha
 
-        You have to create key for reCaptcha. Follow the steps as per the below document.
+    You have to create key for reCaptcha. Follow the steps as per the below document.
 
-        [Creating reCAPTCHA keys](https://cloud.google.com/recaptcha-enterprise/docs/create-key)
+    [Creating reCAPTCHA keys](https://cloud.google.com/recaptcha-enterprise/docs/create-key)
 
-    3. Create an App Password
+3. Create an App Password
 
-        Create an App Password for Google account you will use to send mails.
+    Create an App Password for Google account you will use to send mails.
 
-        For that go to your google account settings.
+    For that go to your google account settings.
 
-        Then 2 factor authentication.
+    Then 2 factor authentication.
 
-        Create App Password.
+    Create App Password.
 
 > After setting creating this credentials, update env.js file with credentials created by you.
 
