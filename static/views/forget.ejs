@@ -1,0 +1,30 @@
+<!-- Page after clicking forgot Password link -->
+
+<link rel="stylesheet" href="/css/formStyles.css">
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-10 col-md-8 col-lg-6 bg-white rounded-4 mx-auto" style="height: 70vh;">
+
+            <h1 class="mt-4 mb-3 text-center">Forgot Password</h1>
+
+            <!-- Form to get user email id -->
+            <form action="/user/forgot-password-action" class="fs-5" method="post">
+                <div class="mt-3">
+                    <label class="form-label" for="user-email">Enter your Email Id</label>
+                    <input type="email" id="user-email" name="userMail" class="form-control form-control-lg" required>
+                </div>
+
+                <div class="mt-3">
+                    <button type="submit" class="btn fs-4 d-block">Proceed</button>
+                </div>
+                
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

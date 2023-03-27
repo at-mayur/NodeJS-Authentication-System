@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/b3348ae33f.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- CDN for JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <!-- Styles and Script cdn for noty js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+
+    <!-- Script tag for Google reCaptcha -->
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+
+
+    <link rel="stylesheet" href="/css/layoutStyles.css">
+
+    <!-- extracted styles will be included here -->
+    <%- style %>
+</head>
+<body>
+    <!-- Header partial -->
+    <%- include("../partials/__header"); %>
+
+    <!-- Content of page will be included here -->
+    <%- body %>
+
+    <!-- footer partial -->
+    <%- include("../partials/__footer"); %>
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- extracted scripts will be included here -->
+    <%- script %>
+
+    <!-- Noty js if particular msg is present -->
+    <% if(locals.flashMessages.success){ %>
+        <script>
+            new Noty({
+                type: "success",
+                layout: "topRight",
+                text: "<%= flashMessages.success %>",
+                timeout: 2000,
+                theme: "bootstrap-v4"
+            }).show();
+        </script>
+    <% } %>
+
+    <% if(locals.flashMessages.warning){ %>
+        <script>
+            new Noty({
+                type: "warning",
+                layout: "topRight",
+                text: "<%= flashMessages.warning %>",
+                timeout: 2000,
+                theme: "bootstrap-v4"
+            }).show();
+        </script>
+    <% } %>
+
+    <% if(locals.flashMessages.info){ %>
+        <script>
+            new Noty({
+                type: "info",
+                layout: "topRight",
+                text: "<%= flashMessages.info %>",
+                timeout: 2000,
+                theme: "bootstrap-v4"
+            }).show();
+        </script>
+    <% } %>
+
+</body>
+</html>

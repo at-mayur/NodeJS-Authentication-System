@@ -1,0 +1,34 @@
+
+<!-- nav element -->
+<nav class="d-flex mb-3 justify-content-between align-items-center" style="height: 8vh;">
+    <!-- navbar brand -->
+    <div>
+        <a href="/" class="text-dark text-decoration-none mx-3 p-2 bg-warning rounded">Auth System</a>
+    </div>
+
+    <!-- navbar links -->
+    <div class="d-flex align-items-center">
+        <% if(locals.user){ %>
+            <!-- if user is logged in then display reset-password and sign-out links -->
+        <div>
+            <a href="/user/reset-password" class="text-light text-decoration-none mx-2 navTab">Reset Password</a>
+        </div>
+    
+        <div>
+            <a href="/user/sign-out" class="text-light text-decoration-none ms-2 me-4 navTab">Sign Out</a>
+        </div>
+        <% } else{ %>
+            <!-- if user is not logged in then display sign-up and sign-in links -->
+        <div>
+            <a href="/user/sign-in" class="text-light text-decoration-none mx-2 navTab">Sign In</a>
+        </div>
+    
+        <div>
+            <a href="/user/sign-up" class="text-light text-decoration-none mx-2 navTab">Sign Up</a>
+        </div>
+        <% } %>
+    
+        
+    </div>
+    
+</nav>

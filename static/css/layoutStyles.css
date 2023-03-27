@@ -1,0 +1,15 @@
+body{
+    background-color: lightgrey;
+}
+
+nav{
+    background-color: rgb(1, 1, 102);
+}
+
+.navTab:hover{
+    text-decoration: underline !important;
+}
+
+footer{
+    background-color: rgb(1, 1, 102);
+}
